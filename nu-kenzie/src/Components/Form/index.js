@@ -12,9 +12,8 @@ function Form( { listTransactions, setListTransactions } ) {
         const transaction = {
             description: descriptionInput,
             type: entryTypeInput,
-            value: moneyInput
+            value: Number(moneyInput)
         }
-        
         setListTransactions(listTransactions.concat(transaction))
     }
 

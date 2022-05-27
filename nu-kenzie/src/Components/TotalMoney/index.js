@@ -2,23 +2,9 @@ import { useState } from "react";
 import "./style.css"
 
 function TotalMoney ( {listTransactions} ) {
-    
-    function convertToNums () {
-        let result = []
-        listTransactions.forEach(element => {
-            if (typeof element.value !== "number") {
-                result.push(Number(element.value))
-            } else {
-                result.push(element.value)
-            }
-        });
-        return result
-    }
-
     function sumBalance() {
-        const initialValue = 0
-        const accumulator = convertToNums().reduce(
-        (previousValue, currentValue) => previousValue + currentValue, initialValue);
+        const accumulator = listTransactions.reduce(
+        (previousValue, currentValue) => previousValue + currentValue.value, 0);
         return accumulator
     }
 

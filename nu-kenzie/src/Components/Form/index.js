@@ -12,9 +12,17 @@ function Form( { listTransactions, setListTransactions } ) {
         const transaction = {
             description: descriptionInput,
             type: entryTypeInput,
-            value: Number(moneyInput)
-        }
+            value: entryTypeVerifier(entryTypeInput, moneyInput)
+        } 
         setListTransactions(listTransactions.concat(transaction))
+    }
+
+    function entryTypeVerifier(entry, value) {
+        if(entry === "Entrada") {
+            return Number(value)
+        } else {
+            return Number(-Math.abs(value))
+        }
     }
 
     return (

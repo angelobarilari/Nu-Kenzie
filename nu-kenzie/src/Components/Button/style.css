@@ -1,0 +1,13 @@
+:root {
+    --color-pink-1: #FD377E;
+}
+
+button {
+    height: 45px;
+    width: 86%;
+    color: white;
+    border-radius: 8px;
+    background-color: var(--color-pink-1);
+    border: 2px solid var(--color-pink-1);
+    cursor: pointer;
+}

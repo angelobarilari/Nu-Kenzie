@@ -2,7 +2,6 @@ import "./style.css"
 import { IoMdTrash } from "react-icons/io"
 
 function Card( { transaction }) {
-    
     return (
         <div className="card">
             <div id="transactionInfo">
